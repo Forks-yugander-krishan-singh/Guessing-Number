@@ -18,18 +18,23 @@ class MasterMind{
 
 
     public static void main(String[] args){
-
-        Random random = new Random();
+        
+        int Min=1, Max = 9;
         
         Set<Integer> randomSet = new TreeSet<Integer>();
         while(randomSet.size()<4){
-            randomSet.add(random.nextInt(10));
+            int value = Min + (int)(Math.random() * ((Max - Min) + 1));
+            randomSet.add(value);
         }
 
         Integer[] secret = randomSet.toArray(new Integer[randomSet.size()]);
+
+        System.out.println("The correct number is "+secret[0]+""+secret[1]+""+secret[2]+""+secret[3]);
         
         int no_of_guess = 8;
         boolean correct = false;
+
+        System.out.println("Please enter four digit number as your guess! !");
 
         while(!correct){
 
@@ -40,11 +45,21 @@ class MasterMind{
                 break;
             }
 
-            Scanner scanner=new Scanner(System.in);
+            int length = 0;
+            int input = 0;
 
-            System.out.println("Enter Your Guess !");
-            
-            int input = scanner.nextInt();
+            do{
+                Scanner scanner = new Scanner(System.in);
+                System.out.println("Enter Your Guess !");
+                
+                input = scanner.nextInt();
+                length = String.valueOf(input).length();
+                if(length!=4){
+                    System.out.println("Please enter four digit number ! !");
+                }
+
+            }while(length!=4);
+
             int guess[] = new int[4];
 
             guess = getArray(input);
