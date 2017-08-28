@@ -1,7 +1,9 @@
 # Guessing-Number
 Guess four unique digit random number inside eight guess
 # RUN 
+
 javac MasterMind.java
+
 java MasterMind
 
 Enter four digit number
