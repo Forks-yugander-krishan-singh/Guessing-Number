@@ -29,8 +29,6 @@ class MasterMind{
 
         Integer[] secret = randomSet.toArray(new Integer[randomSet.size()]);
 
-        System.out.println("The correct number is "+secret[0]+""+secret[1]+""+secret[2]+""+secret[3]);
-        
         int no_of_guess = 8;
         boolean correct = false;
 
