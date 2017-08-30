@@ -32,7 +32,8 @@ class MasterMind{
         int no_of_guess = 8;
         boolean correct = false;
 
-        System.out.println("Please enter four digit number as your guess! !");
+        System.out.println("Please enter four digit number as your guess ! !");
+        System.out.println("You have total of 8 guess available");
 
         while(!correct){
 
